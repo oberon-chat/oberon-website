@@ -3,21 +3,57 @@ body {
   font-size: 16px;
 }
 
-#hero {
+body * {
+  box-sizing: border-box;
+}
+
+body > header {
   background: linear-gradient(180deg, #1a252f, #0b3850);
   color: #fff;
   height: 100vh;
+  position: absolute;
   width: 100%;
 }
 
-#hero-gradient {
+#heading {
+  height: 80px;
+  left: 0;
+  padding: 12px 24px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+#heading .logo {
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+#heading ul.nav {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0 0 0 5px;
+  padding: 0;
+}
+
+#heading ul.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header-gradient {
   background: linear-gradient(180deg, #0b3850, #2995ce);
   height: 100vh;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 5;
+  z-index: 10;
 
   animation-name: opacity;
   animation-duration: 100s;
@@ -33,9 +69,10 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 30;
 }
 
-#hero-content {
+#hero {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -48,7 +85,7 @@ body {
   z-index: 20;
 }
 
-#hero-content h1 {
+#hero h1 {
   text-transform: uppercase;
   font-size: 3em;
   font-weight: 700;
@@ -57,7 +94,7 @@ body {
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-#hero-content h4 {
+#hero h4 {
   font-size: 1.5em;
   font-weight: 300;
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
